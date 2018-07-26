@@ -12,9 +12,21 @@
                     BorderWidth="3"
                     FontSize="Large"
                     FontAttributes="Italic"
-                    Clicked="btnEnviarClicked"/>
+                    Clicked="btnEnviarClicked"
+                    />
             <DatePicker x:Name="dtpFecha"
-                        Format="dd/MM/yyyy"/>
+                        Format="dd/MM/yyyy"
+                        />
+            <Editor x:Name="edComentario"
+                    HeightRequest="100"
+                    Text="Escribir aqui"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    TextColor="BlueViolet"
+                    />
+            <Entry Placeholder="Ingrese su password"
+                   IsPassword="True"
+                   Keyboard="email"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

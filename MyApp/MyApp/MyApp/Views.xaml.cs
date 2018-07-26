@@ -15,9 +15,17 @@ namespace MyApp
 		public Views ()
 		{
 			InitializeComponent ();
+
             dtpFecha.MinimumDate = new DateTime(1970,1,1);
             dtpFecha.DateSelected += DtpFecha_DateSelected;
+
+            edComentario.Completed += EdComentario_Completed;
 		}
+
+        private void EdComentario_Completed(object sender, EventArgs e)
+        {
+            DisplayAlert("Finalizado","Terminando de editar","Listo");
+        }
 
         private void DtpFecha_DateSelected(object sender, DateChangedEventArgs e)
         {

@@ -11,7 +11,7 @@ namespace MyApp
 		{
 			InitializeComponent();
 
-			MainPage = new Views();
+			MainPage = new FormularioInicio();
 		}
 
 		protected override void OnStart ()
