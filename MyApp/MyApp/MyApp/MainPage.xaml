@@ -4,12 +4,21 @@
              xmlns:local="clr-namespace:MyApp"
              x:Class="MyApp.MainPage">
 
-   
+    <StackLayout>
         <!-- Place new controls here -->
         <ActivityIndicator Color="Coral"
-                           IsRunning="True">
-            
-        </ActivityIndicator>
- 
+                           IsRunning="True"/>
+
+        <BoxView Color="Black"
+                 WidthRequest="20"
+                 HeightRequest="20"
+                 HorizontalOptions="Center"/>
+
+        <BoxView Color="Gold"
+                 WidthRequest="200"
+                 HeightRequest="250"
+                 HorizontalOptions="Center"/>
+
+    </StackLayout>
 
 </ContentPage>
