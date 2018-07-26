@@ -7,17 +7,32 @@
     <StackLayout>
         <!-- Place new controls here -->
         <ActivityIndicator Color="Coral"
-                           IsRunning="True"/>
+                           IsRunning="True"
+                           />
 
         <BoxView Color="Black"
                  WidthRequest="20"
                  HeightRequest="20"
-                 HorizontalOptions="Center"/>
+                 HorizontalOptions="Center"
+                 />
 
         <BoxView Color="Gold"
                  WidthRequest="200"
                  HeightRequest="250"
-                 HorizontalOptions="Center"/>
+                 HorizontalOptions="Center"
+                 />
+
+        <Button Text="Xamarin" 
+                TextColor="Aquamarine"
+                BackgroundColor="Gray"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BorderColor="PaleGreen"
+                BorderWidth="2"
+                Image="book64.png"
+                ContentLayout="Top,10"
+                HorizontalOptions="Center"
+                />
 
     </StackLayout>
 

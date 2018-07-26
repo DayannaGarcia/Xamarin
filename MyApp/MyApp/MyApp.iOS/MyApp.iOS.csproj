@@ -156,4 +156,10 @@
       <Name>MyApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\if_booklet_1055108.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\book64.png" />
+  </ItemGroup>
 </Project>
