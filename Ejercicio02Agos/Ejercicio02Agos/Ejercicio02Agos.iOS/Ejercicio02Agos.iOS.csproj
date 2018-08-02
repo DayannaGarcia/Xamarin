@@ -156,4 +156,7 @@
       <Name>Ejercicio02Agos</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\if_female1_403023.png" />
+  </ItemGroup>
 </Project>

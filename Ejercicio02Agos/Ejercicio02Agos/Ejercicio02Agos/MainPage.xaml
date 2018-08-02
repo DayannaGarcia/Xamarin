@@ -3,12 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Ejercicio02Agos"
              x:Class="Ejercicio02Agos.MainPage">
-
+    <ScrollView>
     <StackLayout>
         <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+            <Image Source="if_female1_403023.png"
+                   Aspect="Fill"/>
+            <Label HorizontalOptions="Center"
+                   Text="Xamarin Forms"
+                   TextColor="Aqua"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="End"
+                   BackgroundColor="Blue"
+                   WidthRequest="200"
+                   />
+            <Label VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Text="Xamarin desarrolla aplicaciones moviles multi plataforma"
+                   TextColor="Aqua"
+                   VerticalTextAlignment="End"
+                   BackgroundColor="Blue"
+                   WidthRequest="200"
+                   HeightRequest="300"
+                   LineBreakMode="HeadTruncation"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
