@@ -33,7 +33,20 @@
                    CancelButtonColor="Blue"
                    SearchButtonPressed="Handle_SearchButtonPressed"
                    TextColor="Aqua"
-                   TextChanged="Handle_TextChanged"/>
+                   TextChanged="Handle_TextChanged"
+                   />
+        <Slider x:Name="slider"
+                Maximum="200"
+                Minimum="100"
+                Value="120"
+                ValueChanged="Handle_ValueChanged"
+                />
+        <Label x:Name="labCambio"
+               TextColor="Blue"
+               FontSize="Large"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               />
     </StackLayout>
 
 </ContentPage>

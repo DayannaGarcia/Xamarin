@@ -40,5 +40,9 @@ namespace Ejercicio2
         {
             DisplayAlert("Cambiando","Este texto esta cambiando","Aceptar");
         }
+        void Handle_ValueChanged(object sender, Xamarin.Forms.ValueChangedEventArgs e)
+        {
+            labCambio.Text = slider.Value.ToString();
+        }
     }
 }
