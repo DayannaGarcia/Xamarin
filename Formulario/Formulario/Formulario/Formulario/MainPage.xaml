@@ -15,6 +15,16 @@
                    Keyboard="Text"
                    HorizontalOptions="FillAndExpand"/>
         </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Apellido"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="18"/>
+            <Entry x:Name="UserLastName"
+                   Placeholder="Apellido"
+                   Keyboard="Text"
+                   HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
