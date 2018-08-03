@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ejercicio2"
+             x:Class="Ejercicio2.MainPage">
+
+    <StackLayout>
+        <Picker x:Name="picker"
+                Title="Seleccionar una opcion"
+                TextColor="Fuchsia"
+                SelectedIndexChanged="Handle_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Pop</x:String>
+                    <x:String>Rock</x:String>
+                    <x:String>Instrumental</x:String>
+                    <x:String>Clasica</x:String>
+                    <x:String>Opera</x:String>
+            </Picker.Items>
+        </Picker>
+    </StackLayout>
+
+</ContentPage>
