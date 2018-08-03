@@ -44,5 +44,9 @@ namespace Ejercicio2
         {
             labCambio.Text = slider.Value.ToString();
         }
+        void stepEvent(object sender, Xamarin.Forms.ValueChangedEventArgs e)
+        {
+            lbDisplay.Text = steeper.Value.ToString();
+        }
     }
 }

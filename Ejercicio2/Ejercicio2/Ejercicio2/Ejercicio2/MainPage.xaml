@@ -47,6 +47,14 @@
                HorizontalTextAlignment="Center"
                FontAttributes="Bold"
                />
+        <Stepper x:Name="steeper"
+                 Minimum="50"
+                 Maximum="150"
+                 Increment="25"
+                 ValueChanged="stepEvent"
+                 />
+        <Label x:Name="lbDisplay"/>
+
     </StackLayout>
 
 </ContentPage>
