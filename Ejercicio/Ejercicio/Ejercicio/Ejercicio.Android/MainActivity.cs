@@ -1,26 +1,26 @@
-﻿using Android.App;
+﻿using System;
+
+using Android.App;
+using Android.Content.PM;
+using Android.Runtime;
+using Android.Views;
 using Android.Widget;
 using Android.OS;
 
 namespace Ejercicio.Droid
 {
-    [Activity(Label = "Ejercicio", MainLauncher = true, Icon = "@mipmap/icon")]
-    public class MainActivity : Activity
+    [Activity(Label = "Ejercicio", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        int count = 1;
-
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(savedInstanceState);
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
 
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            base.OnCreate(bundle);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.myButton);
-
-            button.Click += delegate { button.Text = $"{count++} clicks!"; };
+            global::Xamarin.Forms.Forms.Init(this, bundle);
+            LoadApplication(new App());
         }
     }
 }
