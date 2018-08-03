@@ -48,5 +48,19 @@ namespace Ejercicio2
         {
             lbDisplay.Text = steeper.Value.ToString();
         }
+        void Handle_Toggled(object sender, Xamarin.Forms.ToggledEventArgs e)
+        {
+            var estado = this.swtEstado.IsToggled;
+
+            if (this.swtEstado.IsToggled)
+            {
+                DisplayAlert("Switch","Estoy encendido","Aceptar");
+            }
+            else
+            {
+                DisplayAlert("Switch","Estoy apagado","Aceptar");
+            }
+               
+        }
     }
 }

@@ -53,7 +53,12 @@
                  Increment="25"
                  ValueChanged="stepEvent"
                  />
-        <Label x:Name="lbDisplay"/>
+        <Label x:Name="lbDisplay"
+               />
+        <Switch x:Name="swtEstado"
+                IsToggled="True"
+                Toggled="Handle_Toggled"
+                HorizontalOptions="Center"/>
 
     </StackLayout>
 
