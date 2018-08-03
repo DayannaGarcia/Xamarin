@@ -32,5 +32,13 @@ namespace Ejercicio2
                 progressNum.ProgressTo(1,300,Easing.Linear);
             }
         }
+        void Handle_SearchButtonPressed(object sender, System.EventArgs e)
+        {
+            DisplayAlert("Buscando","Buscando Resultados","Aceptar");
+        }
+        void Handle_TextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
+        {
+            DisplayAlert("Cambiando","Este texto esta cambiando","Aceptar");
+        }
     }
 }

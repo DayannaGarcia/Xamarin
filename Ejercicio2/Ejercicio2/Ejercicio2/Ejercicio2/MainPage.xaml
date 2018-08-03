@@ -28,6 +28,12 @@
                 FontSize="Large"
                 Clicked="btnSimular_Clicked"
                 />
+        <SearchBar x:Name="searchBar"
+                   Placeholder="Buscar"
+                   CancelButtonColor="Blue"
+                   SearchButtonPressed="Handle_SearchButtonPressed"
+                   TextColor="Aqua"
+                   TextChanged="Handle_TextChanged"/>
     </StackLayout>
 
 </ContentPage>
