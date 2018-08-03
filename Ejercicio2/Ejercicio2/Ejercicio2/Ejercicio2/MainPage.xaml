@@ -17,6 +17,17 @@
                     <x:String>Opera</x:String>
             </Picker.Items>
         </Picker>
+        <ProgressBar x:Name="progressNum"
+                     Progress="1"
+                     />
+        <Button x:Name="btnSimular"
+                Text="Simular"
+                BackgroundColor="Blue"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Clicked="btnSimular_Clicked"
+                />
     </StackLayout>
 
 </ContentPage>
