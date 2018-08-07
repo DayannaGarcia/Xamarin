@@ -79,6 +79,28 @@ namespace Formulario
  return false;
             }
 
+            if (String.IsNullOrWhiteSpace(UserCelular.Text))
+            {
+                await this.DisplayAlert("Advertencia","El campo del numero de celular es obligatorio","Ok");
+                return false;
+            }
+            //Valida si lacantidad de digitos ingresados es menor a 10
+            else if (UserCelular.Text.Length != 10)
+            {
+                await this.DisplayAlert("Advertencia","Faltan digitos, favor ingresar su numero a 10 digitos","Ok");
+                return false;
+            }
+            else
+            {
+                //Valida que solo se ingresan numeros
+                if (!UserCelular.Text.ToCharArray().All(Char.IsDigit))
+                {
+                    await this.DisplayAlert("Advertencia", "El formato del celular es incorrecto, solo se aceptan numeros", "Ok");
+                    return false;
+                }
+            }
+
+
             return true;
         }
             
