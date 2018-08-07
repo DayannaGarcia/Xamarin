@@ -43,12 +43,48 @@ namespace Formulario
                 bool resultado = Regex.IsMatch(UserName.Text, caractEspecial, RegexOptions.IgnoreCase);
                 if (!resultado)
                 {
-                    await this.DisplayAlert("Advertencia","No se aceptan caracteres especiales, intente de nuevo","OK");
+                    await this.DisplayAlert("Advertencia", "No se aceptan caracteres especiales, intente de nuevo", "OK");
                     return false;
                 }
             }
+
+            if (String.IsNullOrWhiteSpace(UserLastName.Text))
+            {
+                await this.DisplayAlert("Advertencia", "El campo del apellido es obligatorio", "Ok");
+                return false;
+            }
+            //Valida que solo se ingresen letras
+            else if (!UserLastName.Text.ToCharArray().All(Char.IsLetter))
+            {
+                await this.DisplayAlert("Advertencia", "Tu informacion contiene numeros, favor de validar", "Ok");
+                return false;
+            }
+            else
+            {
+                //Valida si se ingresan caracteres especiales
+                string caractEspecial = @"^[^ ] [a-zA-Z]+[^]$";
+                bool resultado = Regex.IsMatch(UserLastName.Text, caractEspecial, RegexOptions.IgnoreCase);
+                if (!resultado)
+                {
+                    await this.DisplayAlert("Advertencia", "No se aceptan caracteres especiales, intente de nuevo", "OK");
+                    return false;
+                }
+            }
+
+            bool isEmail = Regex.IsMatch(UserEmail.Text, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[az0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-
+9])?)\Z", RegexOptions.IgnoreCase);
+            if (!isEmail)
+            {
+                await this.DisplayAlert("Advertencia", "El formato del correo electrónico es incorrecto, revíselo e intente de nuevo.", "OK");
+ return false;
+            }
+
             return true;
         }
+            
+        }
+
+       
         
 	}
-}
+
