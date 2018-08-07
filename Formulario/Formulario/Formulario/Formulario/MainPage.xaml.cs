@@ -16,13 +16,13 @@ namespace Formulario
         }
         async void Continue_Tapped(object sender, EventArgs e)
         {
-            if (await validarFormulario())
+            if (await ValidarFormulario())
             {
                 await DisplayAlert("Exito","Todos los campos cumplieron las validaciones","Ok");
             }
         }
 
-        private async Task<bool> validarFormulario()
+        private async Task<bool> ValidarFormulario()
         {
             //Valida si el valor en el Entry se encuentra vacio o es igual a Null
             if (String.IsNullOrWhiteSpace(UserName.Text))
